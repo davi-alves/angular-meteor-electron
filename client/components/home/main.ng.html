@@ -1,0 +1,13 @@
+<div>
+    <player-list
+        players="players"
+        on-select="playerSelected(player)"
+        ></player-list>
+
+    <div class="details" ng-show="selectedPlayer">
+      <div class="name" ng-bind="selectedPlayer.name"></div>
+      <button class="inc" ng-click="addPoints()">Add 5 points</button>
+    </div>
+
+    <div class="message" ng-hide="selectedPlayer">Click a player to select</div>
+</div>
