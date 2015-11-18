@@ -8,7 +8,7 @@ angular.module('leaderboard')
       controller: function ($scope, $timeout) {
         $scope.players = $scope.$meteorCollection(function () {
           return Players.find({}, { sort: { score: -1, name: 1 }});
-        });
+        }).subscribe('players');
         $scope.selectedPlayer = null;
 
         $scope.playerSelected = function (player) {
